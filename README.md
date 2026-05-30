@@ -1,17 +1,35 @@
-# SG-BBDD-2D-V1 --> ERJuego V1
+# ERJuego
 
-ERJuego es un videojuego que propone el diseño de una especificación conceptual de datos a través de un diagrama de Entidad Relación (E/R). El jugador realiza un 
-diagrama E/R en base a una serie de requisitos textuales modificables.
+ERJuego is a 2D serious game designed to support the learning and practice of conceptual database modelling through Entity–Relationship (E/R) diagrams.
 
-Inicialmente, se le solicita al jugador un identificador único, el cual se incluye en el registro de eventos. Tras introducirlo, el jugador puede usar un menú para 
-navegar por las diferentes pantallas del juego: el mapa, el bloc de notas y el editor de diagrama E/R. Además, el menú proporciona una opción para confirmar el 
-diagrama E/R y salir del juego.
+The game asks students to build an E/R diagram from textual requirements collected during gameplay. While students interact with the game, their actions are recorded in an event log that can later be used for learning analytics and educational process mining.
 
-En la pantalla del mapa el jugador debe obtener los requisitos textuales para el ejercicio propuesto visitando diferentes edificios. Al seleccionar un edificio, un 
-personaje (un delegado de clase, un profesor o una directora de departamento) proporcionará nuevos requisitos textuales.
+## Overview
 
-La pantalla del bloc de notas permite consultar todos los requisitos recolectados por el jugador. Cada requisito está formado por una o dos frases donde la 
-información más relevante para el diseño del E/R (palabras clave) están resaltadas en un color diferente.
+At the beginning of the game, each player enters a unique identifier, which is stored in the event log. After that, the player can use the main menu to access the game map, the notepad, and the E/R diagram editor. The menu also includes an option to confirm the diagram and finish the session.
 
-Por último, el jugador debe diseñar el diagrama E/R usando las herramientas proporcionadas en la pantalla del editor, el cual consta de una barra de inventario y 
-una zona de trabajo. Cuando un jugador confirma su diseño del diagrama E/R, se crea un registro de eventos con todas las interacciones realizadas durante el juego.
+On the map screen, players collect textual requirements by visiting different buildings. When a building is selected, a character provides new information about the data model to be designed.
+
+The notepad screen stores all requirements collected by the player. Each requirement is presented as one or two sentences, with relevant keywords highlighted to support the identification of entities, attributes, and relationships.
+
+Finally, players design the E/R diagram in the editor screen. The editor includes an inventory of extracted keywords and a workspace where players can create, arrange, link, and delete diagram elements and set cardinalities. When the player confirms the diagram, the game generates an event log containing the interactions performed during the session.
+
+## Event logging
+
+The game records students' interactions during the modelling task, including actions such as creating and deleting entities, attributes, and relationships; linking and unlinking elements; and assigning cardinalities. These logs can be used to analyse students' modelling processes beyond their final diagram or score.
+
+## Platforms
+
+The game is intended to be built and distributed for:
+
+- Windows
+- GNU/Linux
+- macOS
+
+## Research use
+
+This repository contains the source code of the serious game used in an educational study on interaction logs, serious game-based learning, and educational process mining.
+
+## License
+
+This project is distributed under the GNU General Public License v3.0 (GPL-3.0). See the `LICENSE` file for details.
